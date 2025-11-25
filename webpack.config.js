@@ -146,6 +146,16 @@ module.exports = (env, argv) => {
             to: '.well-known',
             noErrorOnMissing: true,
           },
+          {
+            from: 'src/robots.txt',
+            to: 'robots.txt',
+            noErrorOnMissing: true,
+          },
+          {
+            from: 'src/sitemap.xml',
+            to: 'sitemap.xml',
+            noErrorOnMissing: true,
+          },
         ],
       }),
     ],
