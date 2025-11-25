@@ -79,6 +79,12 @@ module.exports = (env, argv) => {
         minify: !isDevelopment,
       }),
       new HtmlWebpackPlugin({
+        template: './src/history.html',
+        filename: 'history.html',
+        chunks: ['main'],
+        minify: !isDevelopment,
+      }),
+      new HtmlWebpackPlugin({
         template: './src/blog-article.html',
         filename: 'blog-article.html',
         chunks: ['main'],
