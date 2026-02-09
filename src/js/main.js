@@ -6,6 +6,11 @@
 * License: https://bootstrapmade.com/license/
 */
 
+import Isotope from 'isotope-layout';
+import GLightbox from 'glightbox';
+import Swiper from 'swiper/bundle';
+import AOS from 'aos';
+
 (function() {
   "use strict";
 
