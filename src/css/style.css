@@ -153,6 +153,16 @@ h6 {
 
 #topbar .languages ul a {
   color: white;
+  transition: 0.3s;
+}
+
+#topbar .languages ul a.lang-active {
+  color: #cda45e;
+  font-weight: 600;
+}
+
+#topbar .languages ul a:hover {
+  color: #cda45e;
 }
 
 #topbar .languages ul li+li {
@@ -838,6 +848,17 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .about .about-img::after {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .about .about-img {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 1024px) {

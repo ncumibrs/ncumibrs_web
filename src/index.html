@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="utf-8">
@@ -41,10 +41,16 @@
 
 <!-- ======= Top Bar ======= -->
 <div id="topbar" class="d-flex align-items-center fixed-top">
-  <div class="container d-flex justify-content-center">
+  <div class="container d-flex justify-content-center justify-content-md-between">
     <div class="contact-info d-flex align-items-center">
-      <i class="bi bi-phone d-flex align-items-center"><span>+886-98050123</span></i>
-      <i class="bi bi-clock d-flex align-items-center ms-4"><span> 每個星期四晚上7點社課</span></i>
+      <i class="bi bi-envelope d-flex align-items-center"><span>ncumibrs2024@gmail.com</span></i>
+      <i class="bi bi-clock d-flex align-items-center ms-4"><span data-i18n="topbar.schedule"> 每個星期四晚上7點社課</span></i>
+    </div>
+    <div class="languages d-none d-md-flex align-items-center">
+      <ul>
+        <li><a href="#" id="lang-zh" class="lang-active" onclick="switchLang('zh'); return false;">中文</a></li>
+        <li><a href="#" id="lang-en" onclick="switchLang('en'); return false;">EN</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -58,24 +64,25 @@
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">首頁</a></li>
-        <li><a class="nav-link scrollto" href="#about">我們的故事</a></li>
-        <li><a class="nav-link scrollto" href="#menu">雞尾酒菜單</a></li>
-        <li><a class="nav-link scrollto" href="#events">活動</a></li>
-        <li><a class="nav-link scrollto" href="#gallery">畫廊</a></li>
-        <li><a class="nav-link scrollto" href="#chefs">調酒師</a></li>
-        <li class="dropdown"><a href="#"><span>更多</span> <i class="bi bi-chevron-down"></i></a>
+        <li><a class="nav-link scrollto active" href="#hero" data-i18n="nav.home">首頁</a></li>
+        <li><a class="nav-link scrollto" href="#about" data-i18n="nav.about">我們的故事</a></li>
+        <li><a class="nav-link scrollto" href="#menu" data-i18n="nav.menu">雞尾酒菜單</a></li>
+        <li><a class="nav-link scrollto" href="#events" data-i18n="nav.events">活動</a></li>
+        <li><a class="nav-link scrollto" href="#gallery" data-i18n="nav.gallery">畫廊</a></li>
+        <li><a class="nav-link scrollto" href="#chefs" data-i18n="nav.bartenders">調酒師</a></li>
+        <li><a class="nav-link" href="https://cake11298.github.io/ncu-bar-simulator/" target="_blank" data-i18n="nav.game">調酒遊戲</a></li>
+        <li><a class="nav-link scrollto" href="#contact" data-i18n="nav.contact">聯繫我們</a></li>
+        <li class="dropdown"><a href="#"><span data-i18n="nav.more">更多</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="history.html">歷屆幹部</a></li>
+            <li><a href="history.html" data-i18n="nav.pastStaff">歷屆幹部</a></li>
             <li><a href="inner-page.html">Blog</a></li>
-            <li><a href="https://cake11298.github.io/ncu-bar-simulator/" target="_blank">調酒模擬器 🎮</a></li>
+            <li><a href="https://cake11298.github.io/ncu-bar-simulator/" target="_blank" data-i18n="nav.simulator">調酒模擬器</a></li>
           </ul>
         </li>
-        <li><a class="nav-link scrollto" href="#contact">聯繫我們</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
-    <a href="https://forms.gle/TzNgkzVcBvpqByXP9" class="book-a-table-btn scrollto">加入社團</a>
+    <a href="https://forms.gle/TzNgkzVcBvpqByXP9" class="book-a-table-btn scrollto" data-i18n="nav.join">加入社團</a>
   </div>
 </header><!-- End Header -->
 
@@ -84,12 +91,12 @@
   <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
     <div class="row">
       <div class="col-lg-8">
-        <h1>歡迎來到<span>調酒社</span></h1>
-        <h2>掌握調酒藝術，享受難忘的夜晚。</h2>
+        <h1 data-i18n="hero.title">歡迎來到<span>調酒社</span></h1>
+        <h2 data-i18n="hero.subtitle">掌握調酒藝術，享受難忘的夜晚。</h2>
 
         <div class="btns">
-          <a href="#menu" class="btn-menu animated fadeInUp scrollto">探索雞尾酒</a>
-          <a href="https://forms.gle/TzNgkzVcBvpqByXP9" class="btn-book animated fadeInUp scrollto">加入我們社團</a>
+          <a href="#menu" class="btn-menu animated fadeInUp scrollto" data-i18n="hero.explore">探索雞尾酒</a>
+          <a href="https://forms.gle/TzNgkzVcBvpqByXP9" class="btn-book animated fadeInUp scrollto" data-i18n="hero.joinUs">加入我們社團</a>
         </div>
       </div>
       <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
@@ -106,14 +113,14 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-6 col-12 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="about-img">
               <img src="assets/img/about.jpg" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>深入調酒的藝術之旅</h3>
-            <p class="fst-italic">
+            <h3 data-i18n="about.title">深入調酒的藝術之旅</h3>
+            <p class="fst-italic" data-i18n="about.intro">
               在我們的調酒社中，每一杯調製的雞尾酒都是一場視覺和味覺的盛宴。
             </p>
             <ul>
@@ -146,8 +153,8 @@
     <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>為何選擇我們</h2>
-          <p>選擇我們的調酒社的理由</p>
+          <h2 data-i18n="whyus.label">為何選擇我們</h2>
+          <p data-i18n="whyus.title">選擇我們的調酒社的理由</p>
         </div>
         <div class="row">
           <div class="col-lg-4">
@@ -179,8 +186,8 @@
 <section id="menu" class="menu section-bg">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
-      <h2>菜單</h2>
-      <p>探索我們精心調製的雞尾酒</p>
+      <h2 data-i18n="menu.label">菜單</h2>
+      <p data-i18n="menu.title">探索我們精心調製的雞尾酒</p>
     </div>
     <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class="col-lg-12 d-flex justify-content-center">
@@ -279,8 +286,8 @@
 <section id="specials" class="specials">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
-      <h2>特別推薦</h2>
-      <p>我們的特色課程調酒</p>
+      <h2 data-i18n="specials.label">特別推薦</h2>
+      <p data-i18n="specials.title">我們的特色課程調酒</p>
     </div>
 
     <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -376,8 +383,8 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>活動</h2>
-      <p>我們曾經合作舉辦的活動</p>
+      <h2 data-i18n="events.label">活動</h2>
+      <p data-i18n="events.title">我們曾經合作舉辦的活動</p>
     </div>
 
     <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -439,8 +446,8 @@
 
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>展示</h2>
-          <p>曾經的活動</p>
+          <h2 data-i18n="gallery.label">展示</h2>
+          <p data-i18n="gallery.title">曾經的活動</p>
         </div>
       </div>
 
@@ -522,8 +529,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>社團幹部</h2>
-          <p>第 13 屆分子創意飲品研究社幹部團隊</p>
+          <h2 data-i18n="chefs.label">社團幹部</h2>
+          <p data-i18n="chefs.title">第 13 屆分子創意飲品研究社幹部團隊</p>
         </div>
 
         <div class="row">
@@ -637,9 +644,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>聯絡</h2>
-          <p>聯絡我們</p>
-          <p>國立中央大學 通訊工程學系x調酒社</p>
+          <h2 data-i18n="contact.label">聯絡</h2>
+          <p data-i18n="contact.title">聯絡我們</p>
+          <p data-i18n="contact.org">國立中央大學 調酒社 (分子創意飲品研究社)</p>
         </div>
       </div>
 
@@ -694,8 +701,7 @@
                 <p>
                   國立中央大學 分子創意飲品研究社<br>
                   桃園, 台灣<br><br>
-                  <strong>電話:</strong> +886-980890448<br>
-                  <strong>郵箱:</strong> seaton@gmail.com<br>
+                  <strong data-i18n="footer.email">郵箱:</strong> ncumibrs2024@gmail.com<br>
                 </p>
                 <div class="social-links mt-3">
                   <a href="https://www.facebook.com/profile.php?id=61552298159560" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -735,6 +741,105 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script>
+  var i18nData = {
+    zh: {
+      "topbar.schedule": " 每個星期四晚上7點社課",
+      "nav.home": "首頁",
+      "nav.about": "我們的故事",
+      "nav.menu": "雞尾酒菜單",
+      "nav.events": "活動",
+      "nav.gallery": "畫廊",
+      "nav.bartenders": "調酒師",
+      "nav.game": "調酒遊戲",
+      "nav.contact": "聯繫我們",
+      "nav.more": "更多",
+      "nav.pastStaff": "歷屆幹部",
+      "nav.simulator": "調酒模擬器",
+      "nav.join": "加入社團",
+      "hero.title": "歡迎來到<span>調酒社</span>",
+      "hero.subtitle": "掌握調酒藝術，享受難忘的夜晚。",
+      "hero.explore": "探索雞尾酒",
+      "hero.joinUs": "加入我們社團",
+      "about.title": "深入調酒的藝術之旅",
+      "about.intro": "在我們的調酒社中，每一杯調製的雞尾酒都是一場視覺和味覺的盛宴。",
+      "whyus.label": "為何選擇我們",
+      "whyus.title": "選擇我們的調酒社的理由",
+      "menu.label": "菜單",
+      "menu.title": "探索我們精心調製的雞尾酒",
+      "specials.label": "特別推薦",
+      "specials.title": "我們的特色課程調酒",
+      "events.label": "活動",
+      "events.title": "我們曾經合作舉辦的活動",
+      "gallery.label": "展示",
+      "gallery.title": "曾經的活動",
+      "chefs.label": "社團幹部",
+      "chefs.title": "第 13 屆分子創意飲品研究社幹部團隊",
+      "contact.label": "聯絡",
+      "contact.title": "聯絡我們",
+      "contact.org": "國立中央大學 調酒社 (分子創意飲品研究社)",
+      "footer.email": "郵箱:"
+    },
+    en: {
+      "topbar.schedule": " Club meetings every Thursday at 7 PM",
+      "nav.home": "Home",
+      "nav.about": "Our Story",
+      "nav.menu": "Cocktail Menu",
+      "nav.events": "Events",
+      "nav.gallery": "Gallery",
+      "nav.bartenders": "Bartenders",
+      "nav.game": "Cocktail Game",
+      "nav.contact": "Contact Us",
+      "nav.more": "More",
+      "nav.pastStaff": "Past Staff",
+      "nav.simulator": "Cocktail Simulator",
+      "nav.join": "Join Us",
+      "hero.title": "Welcome to <span>Cocktail Club</span>",
+      "hero.subtitle": "Master the art of mixology, enjoy unforgettable nights.",
+      "hero.explore": "Explore Cocktails",
+      "hero.joinUs": "Join Our Club",
+      "about.title": "A Journey into the Art of Mixology",
+      "about.intro": "In our cocktail club, every crafted cocktail is a feast for the eyes and palate.",
+      "whyus.label": "Why Choose Us",
+      "whyus.title": "Reasons to Choose Our Cocktail Club",
+      "menu.label": "Menu",
+      "menu.title": "Explore Our Carefully Crafted Cocktails",
+      "specials.label": "Specials",
+      "specials.title": "Our Featured Course Cocktails",
+      "events.label": "Events",
+      "events.title": "Events We Have Collaborated On",
+      "gallery.label": "Gallery",
+      "gallery.title": "Past Events",
+      "chefs.label": "Club Staff",
+      "chefs.title": "13th Generation NCUMIBRS Leadership Team",
+      "contact.label": "Contact",
+      "contact.title": "Contact Us",
+      "contact.org": "National Central University Cocktail Club (NCUMIBRS)",
+      "footer.email": "Email:"
+    }
+  };
+
+  function switchLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (i18nData[lang] && i18nData[lang][key]) {
+        el.innerHTML = i18nData[lang][key];
+      }
+    });
+    document.getElementById('lang-zh').classList.toggle('lang-active', lang === 'zh');
+    document.getElementById('lang-en').classList.toggle('lang-active', lang === 'en');
+    document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+    localStorage.setItem('ncumibrs-lang', lang);
+  }
+
+  (function() {
+    var saved = localStorage.getItem('ncumibrs-lang');
+    if (saved && saved !== 'zh') {
+      switchLang(saved);
+    }
+  })();
+</script>
 
 </body>
 
