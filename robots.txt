@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ncumibrs.github.io/ncumibrs_web/sitemap.xml
+
+# Disallow crawling of build files
+Disallow: /node_modules/
+Disallow: /src/
